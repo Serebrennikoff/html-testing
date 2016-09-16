@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Progress Bar</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+	<div class="progress-container">
+		<div id="bar" class="progress-container__bar"></div>
+		<span id="indicator" class="progress-container__indicator">10%</span>
+	</div>
+
+	<button class="progress-btn" onclick="startProgress()">Start</button>
+
+  <script>
+  	function startProgress() {
+  		var bar = document.getElementById('bar'),
+  				indicator = document.getElementById('indicator'),
+  				width = 10;
+  				id = setInterval(fill, 200);
+  		function fill() {
+  			if(width >= 100) {
+  				clearInterval(id);
+  			} else {
+  				width++;
+  				bar.style.width = indicator.textContent = width + '%';
+  			}
+  		}
+  	}
+  </script>
+</body>
+</html>

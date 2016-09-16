@@ -1,0 +1,28 @@
+$small-screen: 768px;
+
+html, body {
+	height: 100%
+}
+body {
+	font-size: 14px;
+}
+* {
+	box-sizing: border-box;
+}
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 45px 15px;
+}
+
+@media (max-width: $small-screen) {
+	.container {
+		padding: 5px 5px;
+	}
+}
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}

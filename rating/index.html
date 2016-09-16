@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rating</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="ratingContainer" class="rating">
+		<span class="rating__element"></span>
+		<span class="rating__element"></span>
+		<span class="rating__element"></span>
+		<span class="rating__element"></span>
+		<span class="rating__element"></span>
+	</div>
+
+	<script>
+	+function() {
+		var rating = 0,
+				activeStars = 0;
+
+		function changeElemState(mousePosition) {
+			var container = ratingContainer.getBoundingClientRect(),
+					elems = ratingContainer.children;
+			activeStars = Math.ceil((mousePosition - container.left)/(container.width/5));
+			if(activeStars > rating) {
+				for(let i = 0, elLen = elems.length; i < elLen; i++) {
+					if(i < activeStars) elems[i].classList.add('rating__element_active');
+					else elems[i].classList.remove('rating__element_active');
+				}
+			}
+		}
+
+		ratingContainer.addEventListener('mousemove', function(e) {
+			changeElemState(e.clientX);
+		});
+		ratingContainer.addEventListener('click', function(e) {
+			rating = activeStars;
+		});
+		ratingContainer.addEventListener('mouseout', function(e) {
+			var elems = this.children;
+			for(let i = 0, elLen = elems.length; i < elLen; i++) {
+				if(i >= rating) elems[i].classList.remove('rating__element_active');
+			}
+		});
+	}();
+	</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+	<div class="container">
+		
+		<nav class="menu">
+			<ul id="menu" class="menu__list">
+
+				<li class="menu-list__responsive-menu">
+					<a href="#" onclick="openMenu(event)">
+					Меню
+					<span class="responsive-menu__icon">&#9776;</span>
+					</a>
+				</li>
+
+				<li class="menu-list__item">
+					<a href="#">Личный кабинет</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="#">Раздел 1</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="#">Раздел 2</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="#">Раздел 3</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="#">Раздел 4</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="#">Раздел 5</a>
+				</li>
+
+			</ul>
+		</nav>
+
+		<section class="content">
+			
+			<aside class="info">
+				<p class="info__text">
+					&#9728;TutuRu - крупнейший сервис поиска, бронирования и покупки авиабилетов и ж/д билетов.
+				</p>
+
+				<p class="info__text">
+					Наша цель проста - делать наших клиентов счастливыми, а их путешествия незабываемыми. Любое путешествие начинается с поиска подходящих билетов и бронирования гостиниц. А мы делаем это качественно, обеспечивая самую лучшую поддержку благодаря собственному контакт-центру.
+				</p>
+			</aside>
+
+			<main class="form-container">
+				
+				<div class="form-container__header">
+					<h1 class="form-container__title">Заполните форму</h1>
+
+					<div class="steps-list">
+						<div class="steps-list__item steps-list__item_passed">1</div><div class="steps-list__item steps-list__item_passed">2</div><div class="steps-list__item steps-list__item_current">3</div><div class="steps-list__item">4</div><div class="steps-list__item">5</div>
+					</div>
+				</div>
+				
+				<div class="form-container__body">
+					<h5 class="form-title">Общая информация</h5>
+
+					<form action="index.html" method="get" class="form">
+
+					<div class="form__group">
+						<label for="lastName" class="form-group__label">Фамилия</label>
+						<input type="text" name="lastName" class="form-group__input">
+					</div>
+
+					<div class="form__group">
+						<label for="firstName" class="form-group__label">Имя</label>
+						<input type="text" name="firstName" class="form-group__input">
+					</div>
+
+					<div class="form__group">
+						<label for="secondName" class="form-group__label">Отчество</label>
+						<input type="text" name="secondName" class="form-group__input">
+					</div>
+
+					<div class="form__group">
+						<p class="form-group__label">Меняли фамилию?</p>
+						
+						<input type="radio" name="group1" id="confirm" class="form-group__checkbox">
+						<label for="confirm" class="form-group__checkbox-label">Да</label>
+
+						<input type="radio" name="group1" id="deny" class="form-group__checkbox">
+						<label for="deny" class="form-group__checkbox-label">Нет</label>
+					</div>
+
+					<div class="form__group">
+						<p class="form-group__label">Пол</p>
+
+						<input type="radio" name="group2" id="male" class="form-group__checkbox">
+						<label for="male" class="form-group__checkbox-label">Муж</label>
+
+						<input type="radio" name="group2" id="female" class="form-group__checkbox">
+						<label for="female" class="form-group__checkbox-label">Жен</label>
+					</div>
+
+					<div class="form__group">
+						<label for="status" class="form-group__label">Семейное положение</label>
+						<select name="status">
+							<option value="maried">Женат/Замужем</option>
+							<option value="notmaried">Холост/Не замужем</option>
+						</select>
+					</div>
+					
+					<div class="form__group">
+						<label for="citizenship" class="form-group__label">Гражданство</label>
+						<select name="citizenship">
+							<option value="russia">Российская Федерация</option>
+							<option value="other">Другое</option>
+						</select>
+					</div>
+					
+					<div class="form__group">
+						<label for="birthDate" class="form-group__label">Дата рождения</label>
+						<div class="selections-group">
+    					<select name="birthDate">
+      					<option value="">День</option>
+      					<option value="">---</option>
+      					<option value="01">01</option>
+      					<option value="02">02</option>
+     						<option value="03">03</option>
+      					<option value="04">04</option>
+      					<option value="05">05</option>
+      					<option value="06">06</option>
+      					<option value="07">07</option>
+      					<option value="08">08</option>
+     					  <option value="09">09</option>
+      					<option value="10">10</option>
+      					<option value="11">11</option>
+      					<option value="12">12</option>
+      					<option value="13">13</option>
+      					<option value="14">14</option>
+      					<option value="15">15</option>
+      					<option value="16">16</option>
+      					<option value="17">17</option>
+      					<option value="18">18</option>
+      					<option value="19">19</option>
+      					<option value="20">20</option>
+      					<option value="21">21</option>
+      					<option value="22">22</option>
+      					<option value="23">23</option>
+      					<option value="24">24</option>
+      					<option value="25">25</option>
+      					<option value="26">26</option>
+      					<option value="27">27</option>
+      					<option value="28">28</option>
+      					<option value="29">29</option>
+      					<option value="30">30</option>
+      					<option value="31">31</option>
+    					</select>
+    					<select name="birthDate">
+      					<option value="">Месяц</option>
+      					<option value="">-----</option>
+      					<option value="01">Январь</option>
+      					<option value="02">Февраль</option>
+      					<option value="03">Март</option>
+      					<option value="04">Апрель</option>
+      					<option value="05">Май</option>
+      					<option value="06">Июнь</option>
+      					<option value="07">Июль</option>
+      					<option value="08">Август</option>
+      					<option value="09">Сентябрь</option>
+      					<option value="10">Октябрь</option>
+      					<option value="11">Ноябрь</option>
+      					<option value="12">Декабрь</option>
+    					</select>
+    					<select name="birthDate">
+    						<option value="">Год</option>
+      					<option value="">-----</option>
+      					<option value="2012">2012</option>
+      					<option value="2011">2011</option>
+      					<option value="2010">2010</option>
+      					<option value="2009">2009</option>
+      					<option value="2008">2008</option>
+      					<option value="2007">2007</option>
+     					  <option value="2006">2006</option>
+     					  <option value="2005">2005</option>
+      					<option value="2004">2004</option>
+      					<option value="2003">2003</option>
+      					<option value="2002">2002</option>
+      					<option value="2001">2001</option>
+      					<option value="2000">2000</option>
+      					<option value="1999">1999</option>
+      					<option value="1998">1998</option>
+      					<option value="1997">1997</option>
+      					<option value="1996">1996</option>
+      					<option value="1995">1995</option>
+      					<option value="1994">1994</option>
+      					<option value="1993">1993</option>
+      					<option value="1992">1992</option>
+      					<option value="1991">1991</option>
+      					<option value="1990">1990</option>
+      					<option value="1989">1989</option>
+      					<option value="1988">1988</option>
+      					<option value="1987">1987</option>
+      					<option value="1986">1986</option>
+      					<option value="1985">1985</option>
+      					<option value="1984">1984</option>
+      					<option value="1983">1983</option>
+      					<option value="1982">1982</option>
+      					<option value="1981">1981</option>
+      					<option value="1980">1980</option>
+      					<option value="1979">1979</option>
+      					<option value="1978">1978</option>
+      					<option value="1977">1977</option>
+      					<option value="1976">1976</option>
+      					<option value="1975">1975</option>
+      					<option value="1974">1974</option>
+      					<option value="1973">1973</option>
+      					<option value="1972">1972</option>
+      					<option value="1971">1971</option>
+      					<option value="1970">1970</option>
+      					<option value="1969">1969</option>
+      					<option value="1968">1968</option>
+      					<option value="1967">1967</option>
+      					<option value="1966">1966</option>
+      					<option value="1965">1965</option>
+      					<option value="1964">1964</option>
+      					<option value="1963">1963</option>
+      					<option value="1962">1962</option>
+      					<option value="1961">1961</option>
+      					<option value="1960">1960</option>
+      					<option value="1959">1959</option>
+      					<option value="1958">1958</option>
+      					<option value="1957">1957</option>
+      					<option value="1956">1956</option>
+      					<option value="1955">1955</option>
+      					<option value="1954">1954</option>
+      					<option value="1953">1953</option>
+      					<option value="1952">1952</option>
+      					<option value="1951">1951</option>
+      					<option value="1950">1950</option>
+      					<option value="1949">1949</option>
+      					<option value="1948">1948</option>
+      					<option value="1947">1947</option>
+      					<option value="1946">1946</option>
+      					<option value="1945">1945</option>
+      					<option value="1944">1944</option>
+      					<option value="1943">1943</option>
+      					<option value="1942">1942</option>
+      					<option value="1941">1941</option>
+      					<option value="1940">1940</option>
+    					</select>
+  					</div>
+					</div>
+					
+					<div class="form__group form__group_full-width">
+						<label for="birthPlace" class="form-group__label">Место рождения</label>
+						<input type="text" name="birthPlace" class="form-group__input form-group__input_full-width">
+						<p class="form-group__tip">
+							Например: Россия, Комсомольск-на-Амуре
+						</p>
+					</div>
+
+					<div class="form__btn-group">
+						<input type="reset" class="btn btn-disabled" value="&larr; Назад" disabled>
+						<input type="submit" class="btn" value="Далее &rarr;">
+					</div>
+					</form>
+				</div>
+
+			</main>
+
+		</section>
+
+	</div>
+
+<script>
+	function openMenu(e) {
+		e.preventDefault();
+		var menu = document.getElementById("menu");
+		menu.classList.toggle('menu__list_responsive');
+	}
+</script>
+</body>
+</html>

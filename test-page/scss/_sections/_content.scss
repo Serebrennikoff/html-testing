@@ -1,0 +1,11 @@
+.content {
+	@extend .clearfix;
+	margin-top: 65px;
+}
+
+@media (max-width: $small-screen) {
+	.content {
+		margin-top: 30px;
+		padding: 0 10px;
+	}
+}

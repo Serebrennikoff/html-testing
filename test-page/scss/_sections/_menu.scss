@@ -1,0 +1,60 @@
+$colors-collection: #BA55D3 #2E8B57 #1E90FF #FF8C00 #8B2500 #A0522D;
+
+.menu {
+	@extend .clearfix;
+	width: 100%;
+}
+.menu__list {
+	border-radius: 10px;
+	box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.5);
+	float: right;
+	list-style-type: none;
+	margin: 0;
+	padding: 15px 25px;
+	width: calc(100% - 240px);
+}
+.menu-list__responsive-menu {
+	display: none;
+}
+.menu-list__responsive-menu a {
+	text-decoration: none;
+	color: #000;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.menu-list__item {
+	display: inline-block;
+	font-size: 1.1rem;
+	padding: 5px 15px;
+}
+
+@each $color in $colors-collection {
+	$i: index($colors-collection, $color);
+	.menu-list__item:nth-child(#{$i}) a:link,
+	.menu-list__item:nth-child(#{$i}) a:visited,
+	.menu-list__item:nth-child(#{$i}) a:active {
+		color: $color;
+	}
+	.menu-list__item:nth-child(#{$i}) a:hover {
+		color: darken($color, 15%);
+	}
+}
+
+@media (max-width: $small-screen) {
+	.menu__list {
+		width: 100%;
+	}
+	.menu-list__item {
+		display: none;
+	}
+	.menu-list__responsive-menu {
+		display: inline-block;
+		width: 100%;
+		text-align: right;
+	}
+	.menu__list_responsive .menu-list__item {
+		display: inline-block;
+		width: 100%;
+		padding: 10px 0
+	}
+}
